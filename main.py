@@ -1,38 +1,24 @@
 import tkinter as tk
-from tkinter import messagebox
-
-def check_number():
-    raw_value = entry_num.get().strip()
-
-    if not raw_value:
-        messagebox.showwarning("Warning", "Please enter a number.")
-        return
-
-    try:
-        val = float(raw_value)
-        if val > 0:
-            lbl_result.config(text="Result: Positive", fg="green")
-        elif val < 0:
-            lbl_result.config(text="Result: Negative", fg="red")
-        else:
-            lbl_result.config(text="Result: Zero", fg="blue")
-    except ValueError:
-        lbl_result.config(text="Result: Invalid Input", fg="darkorange")
+from tkinter import ttk
 
 root = tk.Tk()
-root.title("Number Sign Checker")
-root.geometry("280x180")
+root.title("Books and Authors")
+root.geometry("400x250")
 
-lbl_title = tk.Label(root, text="Enter a Number:")
-lbl_title.pack(pady=(15, 5))
+tree = ttk.Treeview(root, columns=("Book", "Author"), show="headings")
 
-entry_num = tk.Entry(root, width=20)
-entry_num.pack(pady=5)
+tree.heading("Book", text="Book")
+tree.heading("Author", text="Author")
 
-btn_check = tk.Button(root, text="Check", command=check_number, width=12)
-btn_check.pack(pady=10)
+tree.column("Book", width=200)
+tree.column("Author", width=150)
 
-lbl_result = tk.Label(root, text="Result: -", font=("Arial", 10, "bold"))
-lbl_result.pack(pady=5)
+tree.insert("", "end", values=("The Hunger Games", "Suzanne Collins"))
+tree.insert("", "end", values=("The Maze Runner", "James Dashner"))
+tree.insert("", "end", values=("Divergent", "Veronica Roth"))
+tree.insert("", "end", values=("Percy Jackson", "Rick Riordan"))
+tree.insert("", "end", values=("Diary of a Wimpy Kid", "Jeff Kinney"))
+
+tree.pack(padx=10, pady=10)
 
 root.mainloop()
