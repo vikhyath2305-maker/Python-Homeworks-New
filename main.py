@@ -1,17 +1,7 @@
-import csv
-
-shopping_list = ['apple', 'banana', 'carrot']
-
-with open('shopping_list.csv', 'w', newline='') as file:
-    writer = csv.writer(file)
-    writer.writerow(shopping_list)
-
-loaded_list = []
-
-with open('shopping_list.csv', 'r') as file:
-    reader = csv.reader(file)
-    for row in reader:
-        for item in row:
-            loaded_list.append(item)
-
-print(loaded_list)
+with open("schedule.txt", "w") as file:
+    file.write("WEEKLY HOMEWORK SCHEDULE\n\n")
+    file.write("Monday: Math Problems 1-10\n")
+    file.write("Tuesday: Read Science Chapter 4\n")
+    file.write("Wednesday: History paragraph\n")
+    file.write("Thursday: English vocabulary\n")
+    file.write("Friday: Python coding project\n")
