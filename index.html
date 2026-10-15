@@ -1,138 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Japan Travel Itinerary</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f8fafc;
-            color: #1e293b;
-            margin: 0;
-            padding: 30px;
-            line-height: 1.5;
-        }
-
-        header {
-            max-width: 900px;
-            margin: 0 auto 25px auto;
-        }
-
-        h1 {
-            color: #0f172a;
-            font-size: 26px;
-            margin-bottom: 8px;
-        }
-
-        .intro-text {
-            color: #475569;
-            font-size: 14px;
-        }
-
-        .card {
-            max-width: 900px;
-            margin: 0 auto;
-            background-color: #ffffff;
-            border: 1px solid #cbd5e1;
-            border-radius: 6px;
-            padding: 25px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
-        }
-        
-        table-title {
-            text-align: center;
-            font-size: 18px;
-            font-weight: bold;
-            color: #0f172a;
-            margin-bottom: 4px;
-        }
-
-        .table-subtitle {
-            text-align: center;
-            font-size: 13px;
-            color: #64748b;
-            margin-bottom: 20px;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            text-align: left;
-        }
-
-        th, td {
-            border: 1px solid #cbd5e1;
-            padding: 12px 14px;
-            font-size: 14px;
-        }
-
-        th {
-            background-color: #0f172a;
-            color: #ffffff;
-            font-weight: bold;
-            text-align: center;
-        }
-      
-        tbody tr:hover {
-            background-color: #e2e8f0;
-        }
-        </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Interactive Quiz</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <style>
+    body {
+      background-color: #f4f4f4;
+      font-family: sans-serif;
+      padding: 20px;
+    }
+    .my-title-box {
+      background-color: blue;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  </style>
 </head>
 <body>
 
-    <header>
-        <h1>My Japan Travel Itinerary</h1>
-        <p class="intro-text">
-            A 4-day travel plan highlighting cultural sightseeing and modern experiences in Tokyo and Kyoto, organized cleanly in a tabular layout with alternating row colors and grouped travel logistics.
-        </p>
-    </header>
-
-    <div class="card">
-        <div class="table-title">Japan Discovery Tour</div>
-        <div class="table-subtitle">4-Day Itinerary Plan</div>
-
-        <table>
-            <thead>
-                <tr>
-                    <th>Day</th>
-                    <th>Destination</th>
-                    <th>Activities</th>
-                    <th>Travel Mode</th>
-                    <th>Estimated Cost</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Day 1</td>
-                    <td>Tokyo</td>
-                    <td>Senso-ji Temple & Akihabara Electronics District</td>
-                    <td>Subway</td>
-                    <td>$80</td>
-                </tr>
-                <tr>
-                    <td>Day 2</td>
-                    <td>Tokyo</td>
-                    <td>Meiji Shrine, Shibuya Crossing & TeamLab Planets</td>
-                    <td>Train / Walk</td>
-                    <td>$110</td>
-                </tr>
-                <tr>
-                    <td>Day 3</td>
-                    <td>Kyoto</td>
-                    <td>Fushimi Inari Shrine & Bamboo Forest Walk</td>
-                    <td rowspan="2" style="vertical-align: middle;">Shinkansen Bullet Train</td>
-                    <td>$140</td>
-                </tr>
-                <tr>
-                    <td>Day 4</td>
-                    <td>Kyoto</td>
-                    <td>Kinkaku-ji (Golden Pavilion) & Traditional Tea Ceremony</td>
-                    <td>$95</td>
-                </tr>
-            </tbody>
-        </table>
+  <div class="container">
+    <div class="my-title-box">
+      <h1>Wonders of the World</h1>
     </div>
 
+    <h3>The Wonders</h3>
+    <div class="accordion mb-4" id="stuffBox">
+     
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#w1">
+            Pyramid of Giza
+          </button>
+        </h2>
+        <div id="w1" class="accordion-collapse collapse show" data-bs-parent="#stuffBox">
+          <div class="accordion-body">
+            It is in Egypt. It is really old and huge and was built for a Pharaoh a long time ago.
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#w2">
+            Great Wall of China
+          </button>
+        </h2>
+        <div id="w2" class="accordion-collapse collapse" data-bs-parent="#stuffBox">
+          <div class="accordion-body">
+            A super long wall in China made to keep bad guys out. It stretches for thousands of miles.
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#w3">
+            Colosseum
+          </button>
+        </h2>
+        <div id="w3" class="accordion-collapse collapse" data-bs-parent="#stuffBox">
+          <div class="accordion-body">
+            It is in Rome, Italy. Gladiators used to fight here in ancient times.
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <h3>Quick Quiz</h3>
+    <div class="accordion" id="quizBox">
+
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q1">
+            Q1: Which one is in Egypt?
+          </button>
+        </h2>
+        <div id="q1" class="accordion-collapse collapse" data-bs-parent="#quizBox">
+          <div class="accordion-body">
+            <b>Answer:</b> The Pyramid of Giza!
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q2">
+            Q2: Where is the Colosseum?
+          </button>
+        </h2>
+        <div id="q2" class="accordion-collapse collapse" data-bs-parent="#quizBox">
+          <div class="accordion-body">
+            <b>Answer:</b> Rome, Italy!
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 </html>
